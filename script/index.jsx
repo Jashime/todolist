@@ -1,7 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var TodoList = require('./TodoList');
+var TodoList = require('./TodoList.jsx');
+
 
 var Main = React.createClass({
 	getInitialstate:function(){
@@ -18,8 +19,10 @@ var Main = React.createClass({
 		evt.preventDefault();
 
 		var val = this.state.newTodo.trim();
+
 		if(val){
 			console.log(val);
+			this.refs.todoApp.onAdd(val);
 			this.setState({newTodo:''})
 		}
 
@@ -40,9 +43,9 @@ var Main = React.createClass({
 						autoFocus={true}
 						onKeyDown={this.handleNewTodoKeyDown}
 						onChange={this.hanleChange}
-						//value={this.state.newTodo}
-					/>
-					<TodoList/>
+						// value={this.state.newTodo}
+						/>
+					<TodoList ref="todoApp"/>
 				</header>
 			</div>
 		)
