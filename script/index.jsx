@@ -44,7 +44,7 @@ var Main = React.createClass({
 						onKeyDown={this.handleNewTodoKeyDown}
 						onChange={this.hanleChange}
 						// value={this.state.newTodo}
-						/>
+					/>
 					<TodoList ref="todoApp"/>
 				</header>
 			</div>
