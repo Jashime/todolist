@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+//子组件
 var TodoItem = React.createClass({
     render: function(){
 		return (
