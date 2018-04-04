@@ -83,7 +83,8 @@ label[for='toggle-all'] {
   width: 60px;
   height: 34px;
   text-align: center;
-  border: none; }
+  border: none;
+  outline: none; }
 
 .toggle-all:before {
   content: '❯';
@@ -130,6 +131,7 @@ label[for='toggle-all'] {
   bottom: 0;
   margin: 9px auto;
   border: none;
+  outline: none;
   -webkit-appearance: none; }
 
 .todo-list li .toggle:after {
